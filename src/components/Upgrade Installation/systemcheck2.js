@@ -6,8 +6,14 @@ const Systemcheck2 = () => {
     const history = useNavigate();
 
 
-    const backClick = () => {
-        history('/Database');
+    const btnClick = (e) => {
+        e.preventDefault();
+        if(e.currentTarget.value === "back"){
+            history('/database');
+        }
+        else{
+            history('/versiondetails')
+        }
     }
 
 
@@ -73,9 +79,9 @@ const Systemcheck2 = () => {
                                 <p>LDAP extension status<span className='disable'>Disabled</span></p>
                             </div>
                             <div className="licencebuttons">
-                                <button onClick={backClick} className="btn btn-outline-danger licenceback">Back</button>
+                                <button value="back" onClick={btnClick} className="btn btn-outline-danger licenceback">Back</button>
                                 <button className="btn btn-outline-success recheck">Re-Check</button>
-                                <button className="btn btn-primary licencenext">Next</button>
+                                <button value="next" onClick={btnClick} className="btn btn-primary licencenext">Next</button>
                             </div>
 
                         </div>
