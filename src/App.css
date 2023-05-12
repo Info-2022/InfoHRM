@@ -1,0 +1,291 @@
+/* Left Navigation */
+.maindiv{
+   display: flex;
+}
+.navigation{
+   width:20%;
+   max-width: 20%;
+   background: linear-gradient(180deg,#6b68f3,#291f97 90%);
+   min-height:100vh;
+   height: auto;
+   color: white;  
+   padding:0 2rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;  
+}
+.menu{
+  margin-top: 120px;
+}
+.navigation p{
+  font-size: 11px;
+}
+.navigation h2{
+  font-size: 16px;
+  font-weight: bold;
+}
+.navigation h1{
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  margin-left: 3.5rem;
+  margin-top: 1.2rem;
+}
+
+.navigation .count{
+  color: #fff;
+  background-color: #452fed;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1.8rem;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,.15);
+  margin-left: 1rem;
+  margin-top: -2.2rem;
+}
+
+.navigation .countActive{
+  color: #291f97;
+  background-color: #fff;
+} 
+.navigation .countSuccess{
+  color: #fff;
+  background-color: #09bd0c;
+  border: 2px solid rgb(15, 181, 40);
+} 
+.guide{
+  color: #fff;
+  text-decoration: none;
+}
+.guide:hover{
+  text-decoration: underline;
+  color:khaki
+}
+
+/* Right side main content */
+.content{
+  width:80%;
+  height:auto;
+  min-height: 100vh;
+  overflow-y: auto;
+  padding: 0rem 2rem 0rem 2rem;
+ 
+}
+.logo{
+  text-align: end;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+.infoimage{
+  width: 200px;
+  height:100px;
+}
+.head{
+  font-weight: 700;
+  color: #3427c1;
+}
+p{
+  font-size: 12px;
+  margin-top: 5px;
+}
+ .radiohover:hover{
+  background-color: #e2dede;
+  border-radius: 6px;
+  cursor: pointer;
+ }
+.radiolarge:hover , .largecheckbox:hover ,.infocircle:hover{
+  cursor: pointer;
+}
+.nextbtn1{
+  text-align: end;
+}
+/* Licence  */
+.licenceparas{
+  text-align: center;
+  padding:30px;
+  margin: 20px;
+  background-color: #f0f0fc;
+  border: none;
+  border-radius: 30px;
+  height: 360px;
+  overflow:scroll;
+  margin-top: 40px;
+}
+.licenceback{
+  width:90px;
+  height: 38px;
+  border-radius: 15px;
+  margin-right: 15px;
+}
+.recheck{
+  width:120px;
+  height: 38px;
+  border-radius: 15px;
+  margin-right: 15px;
+}
+ 
+.licencenext{
+  width:90px;
+  height: 38px;
+  border-radius: 15px;
+  margin-right: 15px;
+  border: none;
+}
+.licencenext:hover, .cleanupBtn:hover ,.launchBtn:hover{
+  background-color: rgb(22, 178, 22);
+}
+.licencebuttons{
+  margin: 30px;
+  text-align: end;
+}
+input.largecheckbox , .radiolarge{
+  width:17px;
+  height:17px;
+}
+/* Database config */
+#err{
+  color: #e11515;
+  font-size:14px;
+}
+.datalists{
+  margin-top: 15px;
+}
+.datalists1{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.datalists1 .check{
+  margin-left: 300px;
+}
+.check{
+  font-size:small;
+}
+
+.datalists dl{
+  margin-right: 20px;
+}
+ .datalists .host{
+  width:300px;
+  height:40px;
+  border-radius: 10px;
+  border: 1px solid gainsboro;
+}
+.datalists .hostport{
+  width:150px;
+}
+#email{
+  width:625px;
+}
+.datalists dt, .dataterm{
+  font-size: 12px;
+  color: grey;
+  margin-bottom: 5px;
+}
+.infocircle{
+  margin-left: 100px;
+}
+/* system check */
+.syscheck p{
+  display: flex;
+  justify-content: space-between;
+  margin-top: -12px; 
+}
+.syscheck span{
+  color:#09bd0c;
+  font-weight: bold;
+}
+.syscheck .disable{
+  color:#e11515;
+  font-weight: bold;
+}
+.syscheck .warn{
+  color:#d8710a;
+  font-weight: bold;
+}
+/* Modal */
+
+  .modalbackground{
+      top: 35%;
+      height:370px;
+      margin-left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgb(238, 230, 216);
+      width: 600px;
+      padding:20px;
+      border-radius: 30px;
+      position: fixed;
+      transition: 0.5s;
+    }
+    .features{
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .features p , h5{
+      margin-top: -8px;
+    }
+    .modalfooter , .btnclose{
+      text-align: end;
+    }
+    .btnclose button{
+      border-radius: 15px;
+      background-color: gray;
+      color: white;
+      border: none;
+    }
+    .note{
+      background-color: lightgray;
+      padding:15px;
+      border-radius: 20px;
+      margin: 10px;
+    }
+
+    /* Instance creation */
+     .host{
+      width:650px;
+      height:45px;
+      border-radius: 10px;
+      border: 1px solid gainsboro;
+    }
+    .instancedl{
+      margin: 30px 0px 30px 0px;
+    }
+    /* Installation */
+    .cleanupBtn{
+      width:160px;
+    }
+    .installationdiv {
+    width:350px;
+    margin-top: 20px;
+    }
+    .installationdiv div{
+      display: flex;
+      justify-content: space-between;
+      margin: 10px;
+    }
+    .installationdiv i {
+      font-size: 16px;
+    }
+    .installok{
+        background-color: #09bd0c;
+        width:22px;
+        height:22px;
+        border-radius: 40px;
+        color: #fff;
+        text-align: center;
+    }
+    .percentage{
+        text-align: center;
+        color: #09bd0c;
+    }
+    .launchBtn{
+        width:200px;
+        height: 40px;
+        margin: 20px 15px 0px 0px; 
+    }
+   
