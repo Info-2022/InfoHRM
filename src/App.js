@@ -11,6 +11,9 @@ import Adminusercreation from './components/Fresh Installation/adminusercreation
 import Confirmation from './components/Fresh Installation/confirmation';
 import Installation from './components/Fresh Installation/installation';
 import Installationcomplete from './components/Fresh Installation/installationcomplete';
+import Versiondetails from './components/Upgrade Installation/versiondetails';
+import Upgrade from './components/Upgrade Installation/upgrade';
+import Completion from './components/Upgrade Installation/completion';
 
 
 function App() {
@@ -29,6 +32,9 @@ function App() {
           <Route path="/confirmation" element={<Confirmation />} />
           <Route path="/installation" element={<Installation />} />
           <Route path="/installationcomplete" element={<Installationcomplete />} />
+          <Route path="/versiondetails" element={<Versiondetails />} />
+          <Route path='/upgrade' element={<Upgrade/>} />
+          <Route path='/completion' element={<Completion/>} />
         </Routes>
       </BrowserRouter>
 
