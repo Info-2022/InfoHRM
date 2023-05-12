@@ -370,5 +370,53 @@
     {
       "offset": "GMT+14:00",
       "name": "Pacific/Kiritimati"
+    },
+    {
+      "name": "Indian/Mahe",
+      "offset": 240
+    },
+    {
+      "name": "US/Samoa",
+      "offset": -660
+    },
+    {
+      "name": "Indian/Reunion",
+      "offset": 240
+    },
+    {
+      "name": "Indian/Mauritius",
+      "offset": 240
+    },
+    {
+      "name": "Indian/Maldives",
+      "offset": 300
+    },
+    {
+      "name": "Indian/Chagos",
+      "offset": 360
+    },
+    {
+      "name": "Indian/Kerguelen",
+      "offset": 300
+    },
+    {
+      "name": "Indian/Antananarivo",
+      "offset": 180
+    },
+    {
+      "name": "Indian/Comoro",
+      "offset": 180
+    },
+    {
+      "name": "Indian/Mayotte",
+      "offset": 180
+    },
+    {
+      "name": "Indian/Cocos",
+      "offset": 390
+    },
+    {
+      "name": "Indian/Christmas",
+      "offset": 420
     }
   ]
