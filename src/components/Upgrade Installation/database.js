@@ -1,8 +1,15 @@
 import pic from '../../images/infomerica.gif';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 
 const Databaseconfig = () => {
+
+    const [hostname, setHostname] = useState('');
+    const [hostport, setHostport] = useState(3306);
+    const [dbname, setDbname] = useState('');
+    const [dbuname, setDbuname] = useState('');
+    const [dbpassword, setDbpassword] = useState('');
 
     const history = useNavigate();
 
@@ -11,17 +18,9 @@ const Databaseconfig = () => {
             history("/");
         }
         else if (e.currentTarget.value === "next") {
-            const hostname = document.getElementById("hostname").value;
-            const hostport = document.getElementById("hostport").value;
-            const dbname = document.getElementById("dbname").value;
-            const dbuname = document.getElementById("dbuname").value;
-            const dbpassword = document.getElementById("dbpassword").value;
-
             if (hostname !== '' && hostport !== '' && dbname !== '' && dbuname !== '' && dbpassword !== '') {
                 history("/systemcheck2")
             }
-
-
         }
     }
 
@@ -79,17 +78,17 @@ const Databaseconfig = () => {
                                     <div className='datalists1'>
                                         <dl>
                                             <dt>Database Host Name *</dt>
-                                            <dd><input type="text" className='host' id="hostname" required /> </dd>
+                                            <dd><input type="text" onChange={(event) => setHostname(event.target.value)} className='host' id="hostname" required /> </dd>
                                         </dl>
                                         <dl>
                                             <dt>Database Host Port *</dt>
-                                            <dd><input type="text" defaultValue={3306} className=' host hostport' id="hostport" required /> </dd>
+                                            <dd><input type="text" onChange={(event) => setHostport(event.target.value)} defaultValue={3306} className=' host hostport' id="hostport" required /> </dd>
                                         </dl>
                                     </div>
                                     <div className='datalists1'>
                                         <dl>
                                             <dt>Database Name *</dt>
-                                            <dd><input type="text" className='host' id="dbname" required /> </dd>
+                                            <dd><input type="text" onChange={(event) => setDbname(event.target.value)} className='host' id="dbname" required /> </dd>
                                         </dl>
                                     </div>
                                     <div className='datalists1'>
@@ -97,13 +96,13 @@ const Databaseconfig = () => {
                                         <div>
                                             <dl>
                                                 <dt>Database Username *</dt>
-                                                <dd><input type="text" className='host' id="dbuname" required /> </dd>
+                                                <dd><input type="text" onChange={(event) => setDbuname(event.target.value)} className='host' id="dbuname" required /> </dd>
                                             </dl>
                                         </div>
                                         <div>
                                             <dl>
                                                 <dt>Database Password</dt>
-                                                <dd><input type="text" className='host' id="dbpassword" required /> </dd>
+                                                <dd><input type="text" onChange={(event) => setDbpassword(event.target.value)} className='host' id="dbpassword" required /> </dd>
                                             </dl>
                                         </div>
                                     </div>
