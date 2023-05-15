@@ -49,7 +49,7 @@ export default function Versiondetails() {
 
                 <div >
                     <h4 className="head">Current Version Details</h4>
-                    <p>Select your current OrangeHRM version here. You can find the version at the bottom of the OrangeHRM login page. OrangeHRM Upgrader only supports versions listed in the dropdown. Selecting a different version would lead to an upgrade failure and a database corruption.</p>
+                    <p>Select your current InfoHRM version here. You can find the version at the bottom of the InfoHRM login page. InfoHRM Upgrader only supports versions listed in the dropdown. Selecting a different version would lead to an upgrade failure and a database corruption.</p>
                     <div className='datalists'>
                         <div className='datalists1'>
                         <dl className='instancedl'>
