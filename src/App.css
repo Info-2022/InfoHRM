@@ -148,6 +148,9 @@ input.largecheckbox , .radiolarge{
   width:17px;
   height:17px;
 }
+input:disabled{
+  background-color: #dfe2df;
+ }
 /* Database config */
 #err{
   color: #e11515;
