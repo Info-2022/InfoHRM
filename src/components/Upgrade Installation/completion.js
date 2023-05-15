@@ -40,7 +40,7 @@ export default function Completion() {
 
                 <div >
                     <h4 className="head">Upgrade Complete</h4>
-                    <p>You have successfully upgraded to OrangeHRM Starter version 5.3.</p>
+                    <p>You have successfully upgraded to InfoHRM Starter version 5.3.</p>
 
                     <button onClick={launchClick} className="btn btn-primary licencenext launchBtn">Launch InfoHRM</button>
                 </div>
