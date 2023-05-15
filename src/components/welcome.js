@@ -30,7 +30,7 @@ const Welcome = () => {
             </div>
 
             <div className='footer'>
-              <h2><a className='guide' href="https://starterhelp.orangehrm.com/hc/en-us/articles/5295915003666-OrangeHRM-Starter-Installation-Guide"><span><i class="bi bi-book-fill"></i></span>&nbsp; Installation Guide</a></h2>
+              <h2><a className='guide' href="#"><span><i class="bi bi-book-fill"></i></span>&nbsp; Installation Guide</a></h2>
               <p >InfoHRM OS 5.3</p>
               <p>© 2005 - 2023 InfoHRM, Inc. All rights reserved.</p>
             </div>
