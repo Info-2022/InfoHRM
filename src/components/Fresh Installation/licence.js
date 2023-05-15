@@ -145,7 +145,9 @@ const Licence = () => {
 
                             </div>
                             <p>If you accept the terms of the agreement, select the first option below. You must accept the agreement to install InfoHRM. Click Next to continue</p>
-                            <input type="checkbox" onClick={(event) => setAccept(event.target.checked)} className="largecheckbox" ></input> &nbsp;<span>I accept the terms in the License Agreement</span>
+                            <label className='radiohover'>
+                                <input type="checkbox" onClick={(event) => setAccept(event.target.checked)} className="largecheckbox" ></input> &nbsp;<span>I accept the terms in the License Agreement</span>
+                            </label>
                             <div className="licencebuttons">
                                 <button value="back" onClick={btnClick} className="btn btn-outline-danger licenceback">Back</button>
                                 <button value="next" onClick={btnClick} disabled={!accept} className="btn btn-primary licencenext">Next</button>
