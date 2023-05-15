@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import pic from '../../images/infomerica.gif';
 import { useNavigate } from 'react-router-dom';
 import versionnumber from './version.json';
 
 export default function Versiondetails() {
     const history = useNavigate();
-
+    const [version, setVersion] = useState();
 
     const btnClick = (e) => {
         e.preventDefault();
@@ -13,7 +13,9 @@ export default function Versiondetails() {
             history('/systemcheck2');
         }
         else{
-            history('/upgrade')
+            if (version > 0) {
+                history('/upgrade')
+            }
         }
     }
   return (
@@ -51,8 +53,8 @@ export default function Versiondetails() {
                     <div className='datalists'>
                         <div className='datalists1'>
                         <dl className='instancedl'>
-                                        <dt className='dataterm'>Country*</dt>
-                                        <dd><select className='host' id="version" >
+                                        <dt className='dataterm'>Version *</dt>
+                                        <dd><select className='host' onChange={(event) => setVersion(event.target.selectedIndex)} id="version" >
                                             <option>--Select--</option>
                                             {
                                                 versionnumber.map((getcon) => (
