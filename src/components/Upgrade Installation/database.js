@@ -102,7 +102,7 @@ const Databaseconfig = () => {
                                         <div>
                                             <dl>
                                                 <dt>Database Password</dt>
-                                                <dd><input type="text" onChange={(event) => setDbpassword(event.target.value)} className='host' id="dbpassword" required /> </dd>
+                                                <dd><input type="password" onChange={(event) => setDbpassword(event.target.value)} className='host' id="dbpassword" required /> </dd>
                                             </dl>
                                         </div>
                                     </div>
