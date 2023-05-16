@@ -34,7 +34,7 @@ const Databaseconfig = () => {
                         <div className='menu'>
                             <h1>Welcome</h1>
                             <span className='count countSuccess'><i class="bi bi-check"></i></span>
-                            <h1>Database Information</h1>
+                            <h1 className='activehead'>Database Information</h1>
                             <span className='count countActive'>2</span>
                             <h1>System Check</h1>
                             <span className='count'>3</span>
