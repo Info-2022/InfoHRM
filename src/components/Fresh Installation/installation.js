@@ -66,7 +66,7 @@ export default function Installation() {
                             <div className='percentage'>
                                 <h3>25%</h3>
                             </div>
-                            <div class="progress">
+                            <div class="progress" style={{ height: "25px" }}>
                                 <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style={{ width: "25%" }} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                             <div className="licencebuttons">
