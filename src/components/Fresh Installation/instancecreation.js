@@ -1,29 +1,29 @@
 import pic from '../../images/infomerica.gif';
 import { useNavigate } from 'react-router-dom';
-
 import countrydata from './country.json';
 import timezone from './timezone.json';
+import language from './language.json';
 import { useState } from 'react';
-
+import { useForm } from "react-hook-form";
 
 const Instancecreation = () => {
 
     const history = useNavigate();
+    // eslint-disable-next-line no-unused-vars
     const [orgname, setOrgname] = useState('');
+    // eslint-disable-next-line no-unused-vars
     const [country, setCountry] = useState();
+    // eslint-disable-next-line no-unused-vars
+    const [time, setTime] = useState();
+    // eslint-disable-next-line no-unused-vars
+    const [lang, setLang] = useState();
+    const { register, formState: { errors }, handleSubmit } = useForm();
 
-    const btnClick = (e) => {
-        e.preventDefault();
-        if (e.currentTarget.value === "back") {
-            history('/Systemcheck');
-        }
-        else if (e.currentTarget.value === "next") {
-            e.preventDefault();
-            if (orgname !== '' && country > 0) {
-                history('/Adminusercreation');
-            }
-
-        }
+    const backClick = () => {
+        history('/Systemcheck');
+    }
+    const onSubmit = () => {
+        history('/Adminusercreation');
     }
     function GetSortOrder(prop) {
         return function (a, b) {
@@ -50,7 +50,7 @@ const Instancecreation = () => {
                             <span className='count countSuccess'><i class="bi bi-check"></i></span>
                             <h1>System Check</h1>
                             <span className='count countSuccess'><i class="bi bi-check"></i></span>
-                            <h1>Instance Creation</h1>
+                            <h1 className='activehead'>Instance Creation</h1>
                             <span className='count countActive'>5</span>
                             <h1>Admin User Creation</h1>
                             <span className='count'>6</span>
@@ -74,78 +74,65 @@ const Instancecreation = () => {
                             <h4 className="head">Instance Creation</h4>
                             <p>Fill in your organization details here. Details entered in this section will be captured to create your InfoHRM Instance</p>
 
-                            <form>
+                            <form onSubmit={handleSubmit(onSubmit)}>
                                 <div>
                                     <dl className='instancedl'>
                                         <dt className='dataterm'>Organization Name*</dt>
-                                        <dd><input type="text" onChange={(event) => setOrgname(event.target.value)} id="orgname" className='host' placeholder='InfoHRM' required /></dd>
+                                        <dd><input type="text" id="orgname"  {...register("name", { required: "Required" }, { onChange: (e) => { setOrgname(e.target.value) } })} style={{ border: errors.name?.message ? '2px solid red' : '' }} className='host' placeholder='InfoHRM' /></dd>
+                                        {errors.name && <p id="error" role="alert">{errors.name?.message}</p>}
                                     </dl>
-
 
                                     <dl className='instancedl'>
                                         <dt className='dataterm'>Country*</dt>
-                                        <dd><select className='host' onChange={(event) => setCountry(event.target.selectedIndex)} id="country" >
-                                            <option index={0}>--Select--</option>
+                                        <dd><select className='host' id="country" {...register("coun", { required: "Required" }, { onChange: (e) => { setCountry(e.target.value) } })} style={{ border: errors.coun?.message ? '2px solid red' : '' }}>
+                                            <option value=''>--Select--</option>
                                             {
                                                 countrydata.map((getcon) => (
                                                     <option value={getcon.country_id}> {getcon.country_name}</option>
                                                 ))
                                             }
-
                                         </select>
+                                            {errors.coun && <p id="error" role="alert">{errors.coun?.message}</p>}
                                         </dd>
                                     </dl>
-
 
                                     <dl className='instancedl'>
                                         <dt className='dataterm'>Language</dt>
                                         <dd>
-                                            <select className='host' >
+                                            <select className='host' {...register("lang", { onChange: (e) => { setLang(e.target.value) } })}>
                                                 <option>--Select--</option>
-                                                <option>Chinese(Simplified,China)</option>
-                                                <option>Chinese(Traditinal,Taiwan)</option>
-                                                <option>Dutch - Nederlands</option>
-                                                <option>English (United States)</option>
-                                                <option>French - Francais</option>
-                                                <option>German - Deutsch</option>
-                                                <option>Spanish - Espanol</option>
-                                                <option>Spanish (Costa Rica)-Espanol (Costa Rica)</option>
+                                                {
+                                                    language.map((getcon) => (
+                                                        <option value={getcon.id}> {getcon.name}</option>
+                                                    ))
+                                                }
                                             </select>
                                         </dd>
                                     </dl>
 
-
                                     <dl className='instancedl'>
                                         <dt className='dataterm'>Timezone</dt>
                                         <dd >
-                                            <select className='host datta '>
-                                                <option className="timezonediv">--Select--</option>
+                                            <select className='host' {...register("time", { onChange: (e) => { setTime(e.target.value) } })}>
+                                                <option>--Select--</option>
                                                 {
-
                                                     timezone.sort(GetSortOrder('name'))
                                                         .map((gettime, index) => (
                                                             <option key={index}> {gettime.name}</option>
                                                         ))
                                                 }
-
                                             </select>
                                         </dd>
                                     </dl>
 
                                     <p>* Required</p>
                                     <div className="licencebuttons">
-                                        <button value="back" onClick={btnClick} className="btn btn-outline-danger licenceback">Back</button>
-                                        <button value="next" onClick={btnClick} className="btn btn-primary licencenext">Next</button>
+                                        <button onClick={backClick} className="btn btn-outline-danger licenceback">Back</button>
+                                        <button className="btn btn-primary licencenext">Next</button>
                                     </div>
                                 </div>
-
-
-
-
                             </form>
-
                         </div>
-
                     </div>
                 </div>
             </div>
