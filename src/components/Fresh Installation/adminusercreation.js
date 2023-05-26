@@ -48,7 +48,7 @@ export default function Adminusercreation() {
                             <span className='count countSuccess'><i class="bi bi-check"></i></span>
                             <h1>Instance Creation</h1>
                             <span className='count countSuccess'><i class="bi bi-check"></i></span>
-                            <h1>Admin User Creation</h1>
+                            <h1 className='activehead'>Admin User Creation</h1>
                             <span className='count countActive'>6</span>
                             <h1>Confirmation</h1>
                             <span className='count'>7</span>
