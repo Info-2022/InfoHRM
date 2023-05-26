@@ -28,7 +28,7 @@ const Systemcheck2 = () => {
                             <span className='count countSuccess'><i class="bi bi-check"></i></span>
                             <h1>Database Information</h1>
                             <span className='count countSuccess'><i class="bi bi-check"></i></span>
-                            <h1>System Check</h1>
+                            <h1 className='activehead'>System Check</h1>
                             <span className='count countActive'>3</span>
                             <h1>Version Details</h1>
                             <span className='count'>4</span>
