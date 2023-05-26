@@ -35,7 +35,7 @@ export default function Installationcomplete() {
                             <span className='count countSuccess'><i class="bi bi-check"></i></span>
                             <h1>Installation</h1>
                             <span className='count countSuccess'><i class="bi bi-check"></i></span>
-                            <h1>Installation Complete</h1>
+                            <h1 className='activehead'>Installation Complete</h1>
                             <span className='count countActive'>9</span>
                         </div>
                         <div className='footer'>
