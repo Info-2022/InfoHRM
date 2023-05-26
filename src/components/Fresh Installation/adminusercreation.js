@@ -85,7 +85,7 @@ export default function Adminusercreation() {
                                     <div className='datalists1'>
                                         <dl>
                                             <dt>Email*</dt>
-                                            <dd><input type="email" onChange={(event) => setEmail(event.target.value)} className='host' id="email" required /> </dd>
+                                            <dd><input type="email" onChange={(event) => setEmail(event.target.value)} className='host'  required /> </dd>
                                         </dl>
                                         <dl>
                                             <dt>Contact Number</dt>
