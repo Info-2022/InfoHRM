@@ -43,7 +43,7 @@ export default function Confirmation() {
                             <span className='count countSuccess'><i class="bi bi-check"></i></span>
                             <h1>Admin User Creation</h1>
                             <span className='count countSuccess'><i class="bi bi-check"></i></span>
-                            <h1>Confirmation</h1>
+                            <h1 className='activehead'>Confirmation</h1>
                             <span className='count countActive'>7</span>
                             <h1>Installation</h1>
                             <span className='count'>8</span>
