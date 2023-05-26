@@ -31,7 +31,7 @@ export default function Versiondetails() {
                     <span className='count countSuccess'><i class="bi bi-check"></i></span>
                     <h1>System Check</h1>
                     <span className='count countSuccess'><i class="bi bi-check"></i></span>
-                    <h1>Version Details</h1>
+                    <h1 className='activehead'>Version Details</h1>
                     <span className='count countActive'>4</span>
                     <h1>Upgrade</h1>
                     <span className='count'>5</span>
