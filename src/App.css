@@ -183,6 +183,12 @@ input:disabled{
 .datalists .hostport{
   width:150px;
 }
+.datalists1 #hostport{
+  width:150px;
+  height:40px;
+  border-radius: 10px;
+  border: 1px solid gainsboro;
+}
 #email{
   width:625px;
 }
