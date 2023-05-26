@@ -176,6 +176,10 @@ input:disabled{
 .datalists1 .check{
   margin-left: 300px;
 }
+.datalists1 .check{
+  margin-left: 320px;
+  margin-top: 40px;
+}
 .check{
   font-size:small;
 }
