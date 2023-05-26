@@ -26,7 +26,7 @@ export default function Completion() {
                     <span className='count countSuccess'><i class="bi bi-check"></i></span>
                     <h1>Upgrade</h1>
                     <span className='count countSuccess'><i class="bi bi-check"></i></span>
-                    <h1>Completion</h1>
+                    <h1 className='activehead'>Completion</h1>
                     <span className='count countActive'>6</span>
                 </div>
                 <div className='footer'>
