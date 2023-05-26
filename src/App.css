@@ -31,7 +31,9 @@
   margin-left: 3.5rem;
   margin-top: 1.2rem;
 }
-
+.navigation .activehead{
+  color: #fcd704;
+ }
 .navigation .count{
   color: #fff;
   background-color: #452fed;
