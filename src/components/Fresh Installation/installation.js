@@ -37,7 +37,7 @@ export default function Installation() {
                             <span className='count countSuccess'><i class="bi bi-check"></i></span>
                             <h1>Confirmation</h1>
                             <span className='count countSuccess'><i class="bi bi-check"></i></span>
-                            <h1>Installation</h1>
+                            <h1 className='activehead'>Installation</h1>
                             <span className='count countActive'>8</span>
                             <h1>Installation Complete</h1>
                             <span className='count'>9</span>
