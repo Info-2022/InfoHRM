@@ -18,8 +18,10 @@ const Databaseconfig = () => {
     const [orangepassword, setOrangepassword] = useState('');
     const [option1, setOption1] = useState(true);
 
-    const btnClick = (e) => {
+    const formSubmit = (e) => {
         e.preventDefault();
+    }
+    const btnClick = (e) => {
         if (e.currentTarget.value === "back") {
             history('/Licence');
         }
@@ -40,10 +42,10 @@ const Databaseconfig = () => {
 
                     if (dbuname !== '' && dbpassword !== '') {
                         if (accept === true) {
-                            localStorage.setItem("dbuname", dbuname);
                             history('/Systemcheck');
                         } else {
                             if (orangeuname !== '') {
+                                localStorage.setItem("dbuname", dbuname);
                                 history('/Systemcheck');
                             }
                         }
@@ -72,7 +74,7 @@ const Databaseconfig = () => {
                             <span className='count countSuccess'><i class="bi bi-check"></i></span>
                             <h1>License Acceptance</h1>
                             <span className='count countSuccess'><i class="bi bi-check"></i></span>
-                            <h1>Database Configuration</h1>
+                            <h1 className='activehead'>Database Configuration</h1>
                             <span className='count countActive'>3</span>
                             <h1>System Check</h1>
                             <span className='count'>4</span>
@@ -101,7 +103,7 @@ const Databaseconfig = () => {
                             <p>Please enter your database configuration information below. If you are unsure of what to fill in, we suggest that you use the default values.</p>
                             <p>Select Database to Use</p>
 
-                            <form >
+                            <form onSubmit={formSubmit}>
                                 <div className="radio">
                                     <input type="radio" onClick={() => { setVisible(true); setOption1(true) }} className="radiolarge" id="option1" value="option1" name="option" defaultChecked />&nbsp; New Database
                                 </div>
@@ -113,22 +115,21 @@ const Databaseconfig = () => {
                                     <div className='datalists1'>
                                         <dl>
                                             <dt>Database Host Name *</dt>
-                                            <dd><input type="text" onChange={(event) => setHostname(event.target.value)} className='host' id="hostname" required /> </dd>
-                                            <span className='inputErr'></span>
+                                            <dd><input type="text" className='host' id="hostname" onChange={(event) => setHostname(event.target.value)} required /> </dd>
                                         </dl>
                                         <dl>
                                             <dt>Database Host Port *</dt>
-                                            <dd><input type="text" onChange={(event) => setHostport(event.target.value)} defaultValue="3306" className=' host hostport' id="hostport" required /> </dd>
+                                            <dd><input type="text" value={hostport} className='hostport' id="hostport" onChange={(event) => setHostport(event.target.value)} required /> </dd>
                                         </dl>
                                     </div>
                                     <div className='datalists1'>
                                         <dl>
                                             <dt>Database Name *</dt>
-                                            <dd><input type="text" onChange={(event) => setDbname(event.target.value)} className='host' id="dbname" required /> </dd>
+                                            <dd><input type="text" className='host' id="dbname" onChange={(event) => setDbname(event.target.value)} required /> </dd>
                                         </dl>
                                         {visible &&
                                             <>
-                                                <div className='check'><input type="checkbox" onClick={(event) => setAccept(event.target.checked)} className="largecheckbox"></input> &nbsp;<span>Use the same Database User for InfoHRM</span></div>
+                                                <div className='check'><input type="checkbox" className="largecheckbox" onClick={(event) => setAccept(event.target.checked)} ></input> &nbsp;<span>Use the same Database User for InfoHRM</span></div>
                                             </>
                                         }
 
@@ -139,13 +140,13 @@ const Databaseconfig = () => {
                                                 <div>
                                                     <dl>
                                                         <dt>Privileged Database Username *<span className='infocircle'><i class="bi bi-info-circle-fill" title="Privileged Database User should have the rights to create databases, create tables, insert data into table, alter table structure and to create database users."></i></span></dt>
-                                                        <dd><input type="text" onChange={(event) => setDbuname(event.target.value)} className='host' id="dbuname" required /> </dd>
+                                                        <dd><input type="text" className='host' id="dbuname" onChange={(event) => setDbuname(event.target.value)} required /> </dd>
                                                     </dl>
                                                 </div>
                                                 <div>
                                                     <dl>
                                                         <dt>Privileged Database User Password</dt>
-                                                        <dd><input type="password" onChange={(event) => setDbpassword(event.target.value)} className='host' id="dbpassword" /> </dd>
+                                                        <dd><input type="password" className='host' id="dbpassword" onChange={(event) => setDbpassword(event.target.value)} /> </dd>
                                                     </dl>
                                                 </div>
                                             </>
@@ -153,7 +154,7 @@ const Databaseconfig = () => {
                                         <div>
                                             <dl>
                                                 <dt>InfoHRM Database Username *<span className='infocircle'><i class="bi bi-info-circle-fill" title="InfoHRM database user should have the rights to insert data into table, update data in a table, delete data in a table."></i></span></dt>
-                                                <dd><input type="text" onChange={(event) => setOrangeuname(event.target.value)} disabled={accept} className='host' id="orangeuname" required /> </dd>
+                                                <dd><input type="text" className='host' onChange={(event) => setOrangeuname(event.target.value)} disabled={accept} required /> </dd>
                                             </dl>
                                         </div>
                                         <div>
