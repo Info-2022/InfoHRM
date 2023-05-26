@@ -28,7 +28,7 @@ const Licence = () => {
                         <div className='menu'>
                             <h1>Welcome</h1>
                             <span className='count countSuccess'><i class="bi bi-check"></i></span>
-                            <h1>License Acceptance</h1>
+                            <h1 className='activehead'>License Acceptance</h1>
                             <span className='count countActive'>2</span>
                             <h1>Database Configuration</h1>
                             <span className='count'>3</span>
